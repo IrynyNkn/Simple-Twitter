@@ -1,0 +1,81 @@
+@import '../scss/vars.scss';
+@import '../scss/liked.scss';
+@import '../scss/add.scss';
+@import '../scss/edit.scss';
+@import '../scss/message.scss';
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  height: 100%;
+  font-family: $base-font;
+}
+
+body {
+  height: 100%;
+  @include reset-styles;
+  @include header-bg;
+  background: $bg-purple-main;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: 600;
+  margin: 10px 0 0;
+}
+
+button {
+  @include btn;
+}
+
+textarea {
+  margin: 25px;
+  border-radius: 10px;
+  background-color: $bg-light-intense;
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+}
+
+#root {
+  height: 100%;
+  @include center;
+}
+
+.heart {
+  background: url(../img/heart.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  justify-content: flex-start;
+}
+
+.content {
+  @include content;
+}
+
+.main {
+  &__nav {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__add__link,
+  &__liked__link {
+    @include data-links;
+    margin: 25px 0;
+  }
+}
+
+.tweet {
+  @include tweet;
+
+  &__edit__text {
+    @include tweet-text;
+  }
+}

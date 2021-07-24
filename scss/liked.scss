@@ -1,0 +1,29 @@
+@import '../scss/vars.scss';
+
+.content__liked {
+  @include content;
+  width: 60%;
+  border-radius: 25% 10%;
+  @include flex-column;
+}
+
+.back {
+  @include data-links;
+  padding: 10px 40px;
+  border-radius: 10px;
+}
+
+.liked {
+  @include tweet;
+
+  &__empty {
+    margin: 20px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &__tweet__text {
+    @include tweet-text;
+  }
+}

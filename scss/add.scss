@@ -1,0 +1,23 @@
+@import '../scss/vars.scss';
+
+.content__add {
+  @include content;
+  @include flex-column;
+  width: 50%;
+  height: 60%;
+  border-radius: 25px;
+
+  &__links {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+
+    a {
+      @include data-links;
+      font-size: 20px;
+      min-width: 120px;
+      justify-content: center;
+    }
+  }
+}

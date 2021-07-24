@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+$bg-purple-main: url('../img/background_purple.png');
+$bg-light: rgba(255, 255, 255, 0.274);
+$bg-light-intense: rgba(255, 255, 255, 0.699);
+$purple: #8a6dc7;
+$purple-intense: #6b49b9;
+$yellow: #d7d99a;
+$base-font: 'Poppins', sans-serif;
+
+@mixin reset-styles {
+  margin: 0;
+}
+
+@mixin center {
+  @include flex-el;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-el {
+  display: flex;
+}
+
+@mixin flex-column {
+  @include flex-el;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@mixin header-bg {
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin content {
+  width: 80%;
+  height: 90%;
+  background: $bg-light;
+  border-radius: 10% 30% 80% 70%;
+  padding: 20px 50px 75px;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+@mixin data-links {
+  background-color: $yellow;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-flex;
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@mixin tweet {
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: $bg-light-intense;
+  @include flex-el;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin tweet-text {
+  text-decoration: none;
+  color: black;
+}
+
+@mixin btn {
+  min-width: 100px;
+  padding: 5px 0;
+  background-color: $purple;
+  border: 2px solid $purple-intense;
+  color: $bg-light-intense;
+  text-transform: uppercase;
+  font-weight: 600;
+}

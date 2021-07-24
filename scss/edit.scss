@@ -1,0 +1,14 @@
+@import '../scss/vars.scss';
+
+.content__edit {
+  @include content;
+  @include flex-column;
+  width: 50%;
+  height: 60%;
+  border-radius: 50% 20% / 10% 40%;
+}
+
+.cancel,
+.saveChanges {
+  @include data-links;
+}
